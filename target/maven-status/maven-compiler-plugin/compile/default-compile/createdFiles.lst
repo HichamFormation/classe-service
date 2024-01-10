@@ -1,7 +1,11 @@
+org\school\classeapi\dto\ClassDto.class
 org\school\classeapi\base\BaseEntity.class
+org\school\classeapi\entities\Class$ClassBuilder.class
 org\school\classeapi\shared\TechnicalException.class
 org\school\classeapi\ClassApiApplication.class
+org\school\classeapi\entities\Class.class
 org\school\classeapi\shared\ErrorResponse.class
+org\school\classeapi\dto\ClassDto$ClassDtoBuilder.class
 org\school\classeapi\config\InternationalizationConfig.class
 org\school\classeapi\config\AuditAwareConfiguration.class
 org\school\classeapi\shared\BusinessException.class

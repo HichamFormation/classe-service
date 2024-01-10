@@ -245,3 +245,10 @@ G.idea/sonarlint/issuestore/4/4/4406ee3140679444fd6ec34912f9d82b8f083001,f\b\fb
 Q.idea/sonarlint/securityhotspotstore/b/d/bd2a2971ce7cf3e0e8b4c87326ecdcd0ef6f93f0,6\5\65ea328aeb869c275a5a80e0fecac135be53da43
 Å
 Q.idea/sonarlint/securityhotspotstore/7/7/7767ae3206e9ac568512390f51a9d3ad2e11ba9f,c\c\cc4515a57169a7cca4ed049246c5f2fd9fe1f33b
+f
+6src/main/java/org/school/classeapi/entities/Class.java,0\1\01288f658c6de2fbcaaa3f3242b9655022db89a6
+d
+4src/main/java/org/school/classeapi/dto/ClassDto.java,9\5\95669c6a0e826e20aa7456529dd865488b157af8
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302

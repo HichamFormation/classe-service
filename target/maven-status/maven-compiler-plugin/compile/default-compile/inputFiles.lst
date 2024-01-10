@@ -1,5 +1,7 @@
 Y:\WS\classe-api\src\main\java\org\school\classeapi\config\AuditAwareConfiguration.java
+Y:\WS\classe-api\src\main\java\org\school\classeapi\entities\Class.java
 Y:\WS\classe-api\src\main\java\org\school\classeapi\shared\ErrorResponse.java
+Y:\WS\classe-api\src\main\java\org\school\classeapi\dto\ClassDto.java
 Y:\WS\classe-api\src\main\java\org\school\classeapi\shared\TechnicalException.java
 Y:\WS\classe-api\src\main\java\org\school\classeapi\base\BaseEntity.java
 Y:\WS\classe-api\src\main\java\org\school\classeapi\ClassApiApplication.java
