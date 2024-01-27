@@ -1,9 +1,0 @@
-org\school\classeapi\base\BaseEntity.class
-org\school\classeapi\shared\TechnicalException.class
-org\school\classeapi\ClassApiApplication.class
-org\school\classeapi\shared\ErrorResponse.class
-org\school\classeapi\config\InternationalizationConfig.class
-org\school\classeapi\config\AuditAwareConfiguration.class
-org\school\classeapi\shared\BusinessException.class
-org\school\classeapi\shared\ClassMessage.class
-org\school\classeapi\shared\ErrorResponse$ErrorResponseBuilder.class
