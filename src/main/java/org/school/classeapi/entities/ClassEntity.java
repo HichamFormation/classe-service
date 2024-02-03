@@ -20,8 +20,8 @@ import org.school.classeapi.base.BaseEntity;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "student_entity")
-public class Class extends BaseEntity {
+@Table(name = "class_entity")
+public class ClassEntity extends BaseEntity {
 
   /**
    * Identifiant unique de la classe.

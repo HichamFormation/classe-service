@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <databaseChangeLog
-  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
-
+  <changeSet author="yfathi" dbms="mysql" id="model-mysql-1.0">
+    <sqlFile path="db/changelog/changes/model/mysqldb.changlog-v1.0.sql"/>
+  </changeSet>
+  <changeSet author="yfathi" dbms="mysql" id="model-mysql-1.1">
+    <sqlFile path="db/changelog/changes/model/mysqldb.changlog-v1.1.sql"/>
+  </changeSet>
 </databaseChangeLog>
