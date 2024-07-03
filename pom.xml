@@ -6,17 +6,18 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.1.3</version>
+    <version>3.2.6</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>org.school</groupId>
   <artifactId>classe-api</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>student-api</name>
+  <name>classe-api</name>
   <description>Demo project for Spring Boot</description>
   <packaging>jar</packaging>
   <properties>
     <java.version>17</java.version>
+    <spring-cloud.version>2023.0.2</spring-cloud.version>
   </properties>
   <dependencies>
     <dependency>
@@ -41,8 +42,8 @@
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>com.mysql</groupId>
-      <artifactId>mysql-connector-j</artifactId>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
       <scope>runtime</scope>
     </dependency>
     <!-- dependency Swagger -->
@@ -109,7 +110,30 @@
       <version>5.0.0</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-config</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
   </dependencies>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <build>
     <plugins>
       <plugin>

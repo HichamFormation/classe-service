@@ -26,6 +26,11 @@ public class ClassControllerImpl implements ClassController {
   @Autowired
   private ClassService classService;
 
+  @GetMapping(path = "/{id}", name = "FindClasse")
+  public ResponseEntity<ClassDto> findById(@PathVariable(value = "id") Long id) {
+    return ResponseEntity.ok(classService.findById(id));
+  }
+
   @GetMapping(name = "FindAllClasses", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   public ResponseEntity<List<ClassDto>> findAllClasses() {
     return ResponseEntity.ok(classService.getAllClasses());

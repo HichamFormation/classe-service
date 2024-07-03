@@ -16,6 +16,11 @@ public class ClassServiceImpl implements ClassService {
   private ClassRepository classRepository;
 
   @Override
+  public ClassDto findById(Long id) {
+    return ClassMapper.MAPPER.convertEntityToDto(classRepository.findById(id).orElseThrow(() -> new BusinessException(ClassMessage.CLASS_NOT_FOUND)));
+  }
+
+  @Override
   public ClassDto save(ClassDto classDto) {
     return ClassMapper.MAPPER.convertEntityToDto(
         classRepository.save(ClassMapper.MAPPER.convertDtoToEntity(classDto)));

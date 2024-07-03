@@ -5,6 +5,8 @@ import org.school.classeapi.dto.ClassDto;
 
 public interface ClassService {
 
+  ClassDto findById(Long id);
+
   ClassDto save(ClassDto classDto);
 
   List<ClassDto> getAllClasses();

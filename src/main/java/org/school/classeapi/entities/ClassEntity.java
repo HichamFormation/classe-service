@@ -1,16 +1,14 @@
 package org.school.classeapi.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.school.classeapi.base.BaseEntity;
+import org.school.classeapi.dto.StudentDto;
+
+import java.util.List;
 
 /**
  * Entité représentant une classe dans dune école.
@@ -47,5 +45,8 @@ public class ClassEntity extends BaseEntity {
    */
   @Column(name = "nbrPlace")
   private int nombrePlace;
+
+  @Transient
+  List<StudentDto> students;
 
 }

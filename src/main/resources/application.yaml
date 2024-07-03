@@ -8,12 +8,21 @@ log4j:
         SQL: DEBUG
 
 spring:
+  application:
+    name: classe-service
   datasource:
-    url: jdbc:mysql://localhost:3306/classes-db?createDatabaseIfNotExist=true
-    username: root
+    url: jdbc:postgresql://localhost:5432/classedb?createDatabaseIfNotExist=true
+    username: postgres
     password: root
   message:
     resource
+  config:
+    import: optional:configserver:${CONFIG_SERVICE_URL:http://localhost:9999}
+  cloud:
+    discovery:
+      enabled: true
+    config:
+      enabled: true
 
   jpa:
     show-sql: true
@@ -21,16 +30,15 @@ spring:
       ddl-auto: none
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MariaDBDialect
-
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   liquibase:
     change-log: classpath:/db/changelog/changelog-dev-master.xml
     database-change-log-table: DATABASECHANGELOG
     database-change-log-lock-table: DATABASECHANGELOGLOCK # Name of table to use for tracking concurrent Liquibase usage.
-    default-schema: classes-db
+   # default-schema: classedb
     enabled: true
     drop-first: false
-    user: root
+    user: postgres
     password: root
 
 springdoc:
@@ -40,3 +48,16 @@ springdoc:
     urls:
       - url: /swagger.yaml
         name: student
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

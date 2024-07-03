@@ -21,6 +21,11 @@ spring:
     drop-first: true
     user: sa
     password:
+  cloud:
+    discovery:
+      enabled: false
+    config:
+      enabled: false
 
   test:
     database:
