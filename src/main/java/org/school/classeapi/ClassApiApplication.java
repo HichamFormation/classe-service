@@ -13,7 +13,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
  * @version 0.0.1-SNAPSHOT
  */
 @SpringBootApplication
-@EnableConfigurationProperties(ConfigUtils.class)
+@EnableConfigurationProperties
 public class ClassApiApplication {
 
 	/**

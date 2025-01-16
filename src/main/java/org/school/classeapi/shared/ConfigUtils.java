@@ -15,5 +15,6 @@ public class ConfigUtils {
 
    private int p1;
    private int p2;
+   private int c1;
 
 }

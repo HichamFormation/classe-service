@@ -1,63 +1,9 @@
-server:
-  port: 8081
-
-log4j:
-  logger:
-    org:
-      hibernate:
-        SQL: DEBUG
-
 spring:
   application:
     name: classe-service
-  datasource:
-    url: jdbc:postgresql://localhost:5432/classedb?createDatabaseIfNotExist=true
-    username: postgres
-    password: root
-  message:
-    resource
   config:
-    import: optional:configserver:${CONFIG_SERVICE_URL:http://localhost:9999}
+    import: "optional:configserver:"
   cloud:
-    discovery:
-      enabled: true
     config:
-      enabled: true
-
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: none
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-  liquibase:
-    change-log: classpath:/db/changelog/changelog-dev-master.xml
-    database-change-log-table: DATABASECHANGELOG
-    database-change-log-lock-table: DATABASECHANGELOGLOCK # Name of table to use for tracking concurrent Liquibase usage.
-   # default-schema: classedb
-    enabled: true
-    drop-first: false
-    user: postgres
-    password: root
-
-springdoc:
-  swagger-ui:
-    path: /documentation/etudiant.html
-    enabled: true
-    urls:
-      - url: /swagger.yaml
-        name: student
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+      uri: http://config-service:9999/
+      name: classe-service
